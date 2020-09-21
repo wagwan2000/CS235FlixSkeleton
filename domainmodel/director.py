@@ -18,18 +18,7 @@ class Director:
         return other.__director_full_name == self.__director_full_name
 
     def __lt__(self, other):
-        return len(self.__director_full_name) < len(other.__director_full_name)
+        return self.__director_full_name[0] < other.__director_full_name[0]
 
     def __hash__(self):
         return hash(self.__director_full_name)
-
-
-class TestDirectorMethods:
-
-    def test_init(self):
-        director1 = Director("Taika Waititi")
-        assert repr(director1) == "<Director Taika Waititi>"
-        director2 = Director("")
-        assert director2.director_full_name is None
-        director3 = Director(42)
-        assert director3.director_full_name is None
