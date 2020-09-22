@@ -5,8 +5,8 @@ from domainmodel.actor import Actor
 from domainmodel.genre import Genre
 from domainmodel.director import Director
 
-class MovieFileCSVReader:
 
+class MovieFileCSVReader:
     def __init__(self, file_name: str):
         self.__file_name = file_name
         self.__dataset_of_movies = set()
